@@ -1,0 +1,207 @@
+@media (min-width:1024px) {
+    .hide-on-pc {
+        display: none!important;
+    }
+
+    #music-bar-progress__input::-webkit-slider-thumb {
+        display: none;
+    }
+
+    .music-bar-progress__input-wrap:hover #music-bar-progress__input::-webkit-slider-thumb {
+        display: block;
+    }
+
+    .music-bar-option__input-wrap:hover #music-bar-option__input::-webkit-slider-thumb {
+        display: block;
+    }
+
+    #music-bar-option__input::-webkit-slider-thumb {
+        display: none;
+    }
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none!important;
+    }
+
+    .play-list-account {
+        width: unset;
+        height: unset;
+        padding: 2px;
+        border: none;
+    }
+
+    .play-list-account-icon {
+        display: none !important;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none!important;
+    }
+
+    .play-list-header-name {
+        font-size: 4rem;
+    }
+
+    .play-list-header-core__img {
+        width: 192px;
+        height: 192px;
+    }
+
+    .playlist-header {
+        height: 290px;
+    }
+
+    .play-list-main-music-album {
+        display: none !important;
+    }
+
+    .play-list-main-music-date {
+        display: none !important;
+    }
+
+    .play-list-main-header {
+        grid-template-columns: 5% 65% 30%;
+    }
+
+    .play-list-main-music-item {
+        grid-template-columns: 5% 65% 30%;
+    }
+
+    .play-list-main-music-favourite__icon {
+        display: block !important;
+    }
+
+    .music-bar-option {
+        margin-right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .play-list-header-name {
+        font-size: 3.5rem;
+    }
+
+    .play-list-header-descreption {
+        margin-right: 16px;
+    }
+
+    .play-list-account-img {
+        display: none;
+    }
+
+    .playlist-nav {
+        left: 0;
+    }
+
+    .play-list-header-core {
+        flex-direction: column;
+    }
+
+    .play-list-header-core label {
+        justify-content: center;
+    }
+
+    .play-list-header-sub {
+        display: none;
+    }
+
+    .play-list-header-core__img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .playlist-header {
+        height: 260px;
+    }
+
+    .header-wrapper {
+        display: none;
+    }
+
+    .app-content {
+        height: 100%;
+        margin-left: 0;
+        width: unset;
+        max-width: unset;
+        background-image: linear-gradient(0, #121212, #0C1917, #081D1A);
+        ;
+    }
+
+    .playlist-header {
+        background-image: none;
+    }
+
+    .play-list-content {
+        background-image: none;
+        padding-top: 100px;
+    }
+
+    .play-list-header-wrap {
+        margin-left: 0;
+    }
+
+
+
+    .play-list-main-music-album {
+        display: none !important;
+    }
+
+    .play-list-main-music-date {
+        display: none !important;
+    }
+
+    .play-list-main-header {
+        grid-template-columns: 5% 65% 30%;
+    }
+
+    .play-list-main-music-item {
+        grid-template-columns: 5% 65% 30%;
+    }
+
+    .play-list-main-music-favourite__icon {
+        display: block !important;
+    }
+
+    .play-list-main-music {
+        margin-bottom: 0;
+    }
+
+    .music-bar {
+        display: none;
+    }
+
+    .play-list-main {
+        padding-bottom: calc(var(--nav-bar-mobile-height) + var(--play-bar-mobile-height) + 32px);
+        /* padding-bottom: var(--nav-bar-mobile-height); */
+    }
+
+    .mobile-overlay-play-curtime {
+        position: absolute;
+        left: 10%;
+        top: 24px;
+        color: var(--header-color);
+        font-size: 1.4rem;
+    }
+
+    .mobile-overlay-play-ftime {
+        position: absolute;
+        right: 10%;
+        top: 24px;
+        color: var(--header-color);
+        font-size: 1.4rem;
+    }
+
+}
