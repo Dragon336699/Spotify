@@ -71,7 +71,7 @@ const app = {
             name: "Without me",
             author: "Eminem",
             img: "./assets/img/Without me.jpg",
-            path: "./assets/audio/Without me.mp3",
+            path: "./assets/audio/Without Me.mp3",
             album: "Nothing",
             date: "6 thg 5, 2023",
             time: "4:58"
