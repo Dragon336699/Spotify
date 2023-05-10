@@ -68,6 +68,15 @@ const app = {
             time: "4:57"
         },
         {
+            name: "Hẹn em ở lần yêu thứ 2",
+            author: "Nguyenn x Đặng Tuấn Vũ x Freak D",
+            img: "./assets/img/Hẹn em ở lần yêu thứ 2.jpg",
+            path: "./assets/audio/Hẹn em ở lần yêu thứ 2.mp3",
+            album: "Nothing",
+            date: "9 thg 5, 2023",
+            time: "8:17"
+        },
+        {
             name: "Without me",
             author: "Eminem",
             img: "./assets/img/Without me.jpg",
