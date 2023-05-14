@@ -348,7 +348,7 @@ const app = {
                         // Lấy path
                         app.songs.forEach(function (song, index) {
                             const songIndex = songItem[index].getAttribute("index");
-                            if (Number(songIndex) === Number(e.target.getAttribute("index"))) {
+                            if (Number(songIndex) === Number(songNode.getAttribute("index"))) {
                                 songPath = song.path
                                 app.currentIndex = Number(songIndex)
                             }
