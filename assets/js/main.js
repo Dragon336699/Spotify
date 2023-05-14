@@ -250,7 +250,7 @@ const app = {
         playList.onclick = function (e) {
             const songNode = e.target.closest('.play-list-main-music-item')
             if (e.target !== songNode) {
-
+                
             }
             else {
                 const targetImg = e.target.querySelector(".play-list-main-music-name__img").getAttribute("src");
@@ -321,57 +321,60 @@ const app = {
                 const targetName = songNode.querySelector(".play-list-main-music-name").innerHTML;
                 const targetSinger = songNode.querySelector(".play-list-main-music-author").innerHTML;
                 const targetTime = songNode.querySelector(".play-list-main-music-time").innerHTML;
+                const actionNode = songNode.querySelector('.play-list-main-music-taa')
                 var songPath;
                 var songActive
-
-                // Remove class actived trước khi add
-                var songItem = $$('.play-list-main-music-item')
-                songItem.forEach(function (song) {
-                    if (song.classList.contains('actived')) {
-                        songActive = song
-                    }
-                })
-                if (e.target.closest(".play-list-main-music-item") !== songActive) {
-                    app.songs.forEach(function (song, index) {
-                        songItem[index].closest(".play-list-main-music-item").classList.remove("actived");
-                    })
-                    // Add class actived vào nhạc đang chạy
-                    app.songs.forEach(function (song, index) {
-                        const songIndex = songItem[index].getAttribute("index");
-                        if (Number(songIndex) === Number(songNode.getAttribute("index"))) {
-                            songItem[index].closest(".play-list-main-music-item").classList.add("actived");
+                // Check xem khi nào nhấn vào phần tim và thời gian thì không chuyển bài, còn nhấn vào tên thì chuyển bài 
+                if (e.target.closest('.play-list-main-music-taa') !== actionNode){
+                    // Remove class actived trước khi add
+                    var songItem = $$('.play-list-main-music-item')
+                    songItem.forEach(function (song) {
+                        if (song.classList.contains('actived')) {
+                            songActive = song
                         }
                     })
-
-                    // Lấy path
-                    app.songs.forEach(function (song, index) {
-                        const songIndex = songItem[index].getAttribute("index");
-                        if (Number(songIndex) === Number(e.target.getAttribute("index"))) {
-                            songPath = song.path
-                            app.currentIndex = Number(songIndex)
-                        }
-                    })
-
-                    // Pc
-                    musicBarImg.src = targetImg
-                    musicBarName.innerHTML = targetName
-                    musicBarSinger.innerHTML = targetSinger
-                    musicBarFullTime.innerHTML = targetTime
-                    audio.src = songPath;
-                    headerCoreImg.src = targetImg
-
-
-                    //Mobile
-                    musicBarNameMobile.innerHTML = targetName
-                    musicBarImgMobile.src = targetImg
-                    musicBarSingerMobile.innerHTML = targetSinger
-                    overlayMobileImg.src = targetImg
-                    overlayMobileName.innerHTML = targetName
-                    overlayMobileSinger.innerHTML = targetSinger
-                    overlayFtimeMobile.innerHTML = targetTime
-                    audio.play();
-                    spotify.classList.add('playing')
-                };
+                    if (e.target.closest(".play-list-main-music-item") !== songActive) {
+                        app.songs.forEach(function (song, index) {
+                            songItem[index].closest(".play-list-main-music-item").classList.remove("actived");
+                        })
+                        // Add class actived vào nhạc đang chạy
+                        app.songs.forEach(function (song, index) {
+                            const songIndex = songItem[index].getAttribute("index");
+                            if (Number(songIndex) === Number(songNode.getAttribute("index"))) {
+                                songItem[index].closest(".play-list-main-music-item").classList.add("actived");
+                            }
+                        })
+    
+                        // Lấy path
+                        app.songs.forEach(function (song, index) {
+                            const songIndex = songItem[index].getAttribute("index");
+                            if (Number(songIndex) === Number(e.target.getAttribute("index"))) {
+                                songPath = song.path
+                                app.currentIndex = Number(songIndex)
+                            }
+                        })
+    
+                        // Pc
+                        musicBarImg.src = targetImg
+                        musicBarName.innerHTML = targetName
+                        musicBarSinger.innerHTML = targetSinger
+                        musicBarFullTime.innerHTML = targetTime
+                        audio.src = songPath;
+                        headerCoreImg.src = targetImg
+    
+    
+                        //Mobile
+                        musicBarNameMobile.innerHTML = targetName
+                        musicBarImgMobile.src = targetImg
+                        musicBarSingerMobile.innerHTML = targetSinger
+                        overlayMobileImg.src = targetImg
+                        overlayMobileName.innerHTML = targetName
+                        overlayMobileSinger.innerHTML = targetSinger
+                        overlayFtimeMobile.innerHTML = targetTime
+                        audio.play();
+                        spotify.classList.add('playing')
+                    };
+                }
             }
         }
 

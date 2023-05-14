@@ -256,6 +256,7 @@
 }
 
 .play-list-main-music-item {
+  line-height: 100%;
   border-radius: 4px;
   display: grid;
   grid-template-columns: 5% 40% 20% 20% 15%;
