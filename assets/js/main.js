@@ -65,7 +65,7 @@ const app = {
             path: "./assets/audio/Như anh đã thấy em.mp3",
             album: "Nothing",
             date: "29 thg 4, 2023",
-            time: "4:57"
+            time: "5:36"
         },
         {
             name: "Hẹn em ở lần yêu thứ 2",
