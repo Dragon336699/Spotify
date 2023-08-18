@@ -84,6 +84,15 @@ const app = {
             album: "Nothing",
             date: "6 thg 5, 2023",
             time: "4:58"
+        },
+        {
+            name: "Rap của Long",
+            author: "Long",
+            img: "./assets/img/Without me.jpg",
+            path: "./assets/audio/StrRap.mp4",
+            album: "Nothing",
+            date: "18 thg 8, 2023",
+            time: "00:37"
         }
     ],
     renderSong: function () {
